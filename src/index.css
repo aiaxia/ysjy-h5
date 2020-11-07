@@ -5,6 +5,9 @@ html, body, :global(#root) {
 img{
   vertical-align: middle;
 }
+.slider-frame{
+  height: 295px !important;
+}
 p{
   margin: 0;
   padding: 0;

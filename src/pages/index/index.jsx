@@ -1,5 +1,5 @@
 import { connect } from 'dva';
-// import { Link } from 'dva/router';
+import { Link } from 'dva/router';
 import * as React from 'react';
 import { Carousel } from 'antd-mobile';
 import Titlebox from '../../components/titlebox/titlebox';
@@ -35,6 +35,9 @@ class Index extends React.PureComponent {
                   key={val}
                   src={banner1}
                   style={{ width: '100%', verticalAlign: 'top' }}
+                  onLoad={() => {
+                    window.dispatchEvent(new Event('resize')); // 必须要这句，不然返回后banner高度为0
+                  }}
                 />
             ))}
           </Carousel>
@@ -45,7 +48,7 @@ class Index extends React.PureComponent {
             <img src={logo} alt=""/>
           </div>
           <div className={styles.knowus}>
-            了解我们{`>>`}
+            <Link to='/knowus' className={styles.returnBtn}>了解我们{`>>`}</Link>
           </div>
         </div>
         <div className={styles.mainBox}>
