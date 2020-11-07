@@ -1,0 +1,15 @@
+html, body, :global(#root) {
+  height: 100%;
+  background: white;
+}
+img{
+  vertical-align: middle;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{overflow:hidden;_zoom:1;}
+.fl{float:left;}
+.fr{float:right;}

@@ -1,0 +1,13 @@
+{
+  "hash": true,
+  "html": {
+    "template": "./public/index.ejs"
+  },
+  "extraBabelPlugins": [
+    ["import", {
+      "libraryName": "antd",
+      "libraryDirectory": "es",
+      "style": true
+    }]
+  ]
+}
