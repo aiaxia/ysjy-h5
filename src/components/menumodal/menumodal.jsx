@@ -19,11 +19,11 @@ class Titlebox extends React.PureComponent {
         },
         {
           name: '互动方案',
-          link: ''
+          link: 'interact'
         },
         {
           name: '广告设计制作',
-          link: ''
+          link: 'adv'
         },
       ]
     };
