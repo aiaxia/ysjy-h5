@@ -2,8 +2,7 @@ import { connect } from 'dva';
 // import { Link } from 'dva/router';
 import * as React from 'react';
 import banner1 from '../../assets/banner1.png';
-import returnimg from '../../assets/return.png';
-import logo from '../../assets/logo.png';
+import Title from '../../components/title/title'
 import styles from './knowus.less';
 
 class Knowus extends React.PureComponent {
@@ -23,10 +22,7 @@ class Knowus extends React.PureComponent {
           <div>
             <img className={styles.mainimg} src={banner1} alt=""/>
           </div>
-          <div className={styles.return}>
-            <img src={returnimg} alt=""/>北京优尚佳艺传媒广告有限公司
-          </div>
-          <img className={styles.logo} src={logo} alt=""/>
+          <Title title="北京优尚佳艺传媒广告有限公司" showlogo={true} />
         </div>
         <div className={styles.main}>
           <div>
