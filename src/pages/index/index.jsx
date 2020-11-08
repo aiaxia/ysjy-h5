@@ -7,7 +7,6 @@ import Mainitem from '../../components/mainitem/mainitem';
 import Contacts from '../../components/contacts/contacts';
 import Menumodal from '../../components/menumodal/menumodal';
 import banner1 from '../../assets/banner1.png';
-import menu from '../../assets/menu.png';
 import logo from '../../assets/logo.png';
 import styles from './index.less';
 
@@ -43,7 +42,7 @@ class Index extends React.PureComponent {
             ))}
           </Carousel>
           <div className={styles.menuicon}>
-            <img src={menu} alt=""/>
+            <Menumodal />
           </div>
           <div className={styles.logoBox}>
             <img src={logo} alt=""/>
@@ -85,14 +84,14 @@ class Index extends React.PureComponent {
             <div></div>
           </div>
         </div>
-        <Menumodal />
       </div>
     )
   }
 }
 
-function mapStateToProps({}) {
+function mapStateToProps({menumodal}) {
   return {
+    menumodal: menumodal
   };
 }
 

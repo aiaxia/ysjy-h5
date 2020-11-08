@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png';
 import returnimg from '../../assets/return.png';
 import styles from './title.less';
 
-class Titlebox extends React.PureComponent {
+class Title extends React.PureComponent {
   constructor (props) {
     super(props);
     this.state={
@@ -31,4 +31,4 @@ function mapStateToProps({}) {
   };
 }
 
-export default connect(mapStateToProps)(Titlebox)
+export default connect(mapStateToProps)(Title)
