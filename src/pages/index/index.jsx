@@ -5,6 +5,7 @@ import { Carousel } from 'antd-mobile';
 import Titlebox from '../../components/titlebox/titlebox';
 import Mainitem from '../../components/mainitem/mainitem';
 import Contacts from '../../components/contacts/contacts';
+import Menumodal from '../../components/menumodal/menumodal';
 import banner1 from '../../assets/banner1.png';
 import menu from '../../assets/menu.png';
 import logo from '../../assets/logo.png';
@@ -62,13 +63,13 @@ class Index extends React.PureComponent {
             </div>
           </div>
           <div className={styles.meichen}>
-            <div className={styles.titleBox}><Titlebox title="美陈定制" /></div>
+            <div className={styles.titleBox}><Titlebox title="美陈定制" link="meichen" /></div>
             <div className={styles.iteMain}>
               <Mainitem show={1} />
             </div>
           </div>
           <div className={styles.meichen}>
-            <div className={styles.titleBox}><Titlebox title="活动会展" /></div>
+            <div className={styles.titleBox}><Titlebox title="活动会展" link="active" /></div>
             <div className={styles.iteMain}>
               <Mainitem show={2} />
             </div>
@@ -84,6 +85,7 @@ class Index extends React.PureComponent {
             <div></div>
           </div>
         </div>
+        <Menumodal />
       </div>
     )
   }

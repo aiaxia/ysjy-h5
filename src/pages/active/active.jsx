@@ -1,11 +1,10 @@
 import { connect } from 'dva';
-import { Link } from 'dva/router';
 import * as React from 'react';
 import Title from '../../components/title/title'
 import Mainitem from '../../components/mainitem/mainitem';
-import styles from './meichen.less';
+import styles from './active.less';
 
-class Meichen extends React.PureComponent {
+class Active extends React.PureComponent {
   constructor (props) {
     super(props);
     this.state={
@@ -21,10 +20,10 @@ class Meichen extends React.PureComponent {
     return (
       <div className={styles.meichenBox}>
         <div className={styles.title}>
-          <Title title="美陈定制" />
+          <Title title="活动会展" />
         </div>
         <div className={styles.main}>
-          <Mainitem show={1} />
+          <Mainitem show={2} />
         </div>
       </div>
     )
@@ -36,4 +35,4 @@ function mapStateToProps({}) {
   };
 }
 
-export default connect(mapStateToProps)(Meichen)
+export default connect(mapStateToProps)(Active)

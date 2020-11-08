@@ -1,5 +1,6 @@
 import { connect } from 'dva';
 import * as React from 'react';
+import { Link } from 'dva/router';
 import styles from './titlebox.less';
 
 class Titlebox extends React.PureComponent {
@@ -12,11 +13,11 @@ class Titlebox extends React.PureComponent {
   componentDidMount(){
   }
   render() {
-    const {title} = this.props
+    const {title,link} = this.props
     return (
       <div className={styles.titleBox}>
         <span className={styles.title}>{title}</span>
-        <span className={styles.more}>更多案例{`>>`}</span>
+        <span className={styles.more}><Link to={link}>更多案例{`>>`}</Link></span>
       </div>
     )
   }
