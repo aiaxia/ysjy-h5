@@ -7,10 +7,18 @@
 找到你上次那个zhonghai-h5,然后找到他的上一层文件夹，用vscode打开比如：work---zhonghai-h5打开work
 
 然后点击菜单栏的查看，点击终端然后输入   git clone https://github.com/aiaxia/ysjy-h5.git
+（这样work的文件里会自动生成一个新的文件夹，就是项目）
 
-然后输入npm install
+把项目用vscode打开,或者把新生成的文件直接拖到vscode也可以
 
-然后输入npm run start(看界面效果的)
+然后点击菜单栏的查看，点击终端输入npm install(只第一次克隆代码的时候运行一次，以后都不用运行)，运行完成再执行下一步
+
+然后输入npm run start(看界面效果的,浏览器)
+
+
+## 更新代码
+
+输入git pull拉一下新的代码
 
 
 ## 上传服务器代码步骤

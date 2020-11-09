@@ -1,4 +1,5 @@
 import { connect } from 'dva';
+import { Link } from 'dva/router';
 import * as React from 'react';
 import logo from '../../assets/logo.png';
 import returnimg from '../../assets/return.png';
@@ -18,7 +19,7 @@ class Title extends React.PureComponent {
     return (
       <div className={styles.title}>
         <div className={styles.return}>
-          <img src={returnimg} alt=""/>{title}
+          <Link to="/"><img src={returnimg} alt=""/></Link>{title}
         </div>
         {showlogo?<img className={styles.logo} src={logo} alt=""/>:''}
       </div>
