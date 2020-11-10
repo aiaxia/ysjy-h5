@@ -1,7 +1,8 @@
 import { connect } from 'dva';
 import { Link } from 'dva/router';
 import * as React from 'react';
-import { Carousel } from 'antd-mobile';
+import Swiper from 'swiper';
+import 'swiper/css/swiper.css';
 import Titlebox from '../../components/titlebox/titlebox';
 import Mainitem from '../../components/mainitem/mainitem';
 import Contacts from '../../components/contacts/contacts';
@@ -17,8 +18,19 @@ class Index extends React.PureComponent {
       data: ['1', '2', '3'],
     };
   }
-  componentWillUnmount=()=>{
-
+  componentDidMount(){
+    new Swiper ('.swiper-container', {
+        simulateTouch: true,
+        allowTouchMove: true,
+        loop: true, // 循环模式选项
+        autoplay: {
+          delay: 3000,//3秒切换一次
+        },
+        pagination: {// 如果需要分页器
+          el: '.swiper-pagination',
+          clickable: false,
+        }
+    })
   }
 
   render() {
@@ -26,21 +38,21 @@ class Index extends React.PureComponent {
     return (
       <div className={styles.homeBox}>
         <div className={styles.topbox}>
-          <Carousel
-            autoplay={false}
-            infinite
-          >
+          <div className="swiper-container">
+            <div className="swiper-wrapper">
             {this.state.data.map(val => (
                 <img
+                  className="swiper-slide"
                   key={val}
                   src={banner1}
-                  style={{ width: '100%', verticalAlign: 'top' }}
                   onLoad={() => {
                     window.dispatchEvent(new Event('resize')); // 必须要这句，不然返回后banner高度为0
                   }}
                 />
             ))}
-          </Carousel>
+            </div>
+            <div className="swiper-pagination"></div>
+          </div>
           <div className={styles.menuicon}>
             <Menumodal />
           </div>
