@@ -11,7 +11,7 @@ import banner1 from '../../assets/banner1.png';
 import logo from '../../assets/logo.png';
 import styles from './index.less';
 
-class Index extends React.PureComponent {
+class Index2 extends React.PureComponent {
   constructor (props) {
     super(props);
     this.state={
@@ -19,45 +19,18 @@ class Index extends React.PureComponent {
     };
   }
   componentDidMount(){
-    // new Swiper ('.swiper-container', {
-    //     simulateTouch: true,
-    //     allowTouchMove: true,
-    //     loop: true, // 循环模式选项
-    //     autoplay: {
-    //       delay: 3000,//3秒切换一次
-    //     },
-    //     pagination: {// 如果需要分页器
-    //       el: '.swiper-pagination',
-    //       clickable: false,
-    //     }
-    // })
-    this.instanceSwiper()
-  }
-  instanceSwiper() {
-    this.swiperObj = new Swiper('.swiper-container', {
-      simulateTouch: true,
-      allowTouchMove: true,
-      loop: true, // 循环模式选项
-      autoplay: {
-        delay: 3000,//3秒切换一次
-      },
-      pagination: {// 如果需要分页器
-        el: '.swiper-pagination',
-        clickable: false,
-      },
-      observer: true,//修改swiper自己或子元素时，自动初始化swiper    重要
-      observeParents: true,//修改swiper的父元素时，自动初始化swiper  重要
+    new Swiper ('.swiper-container', {
+        simulateTouch: true,
+        allowTouchMove: true,
+        loop: true, // 循环模式选项
+        autoplay: {
+          delay: 3000,//3秒切换一次
+        },
+        pagination: {// 如果需要分页器
+          el: '.swiper-pagination',
+          clickable: false,
+        }
     })
-  }
-  componentDidUpdate() {
-    this.swiperObj.update();
-    this.swiperObj.slideTo(0, 3000, false);
-  }
-  componentWillUnmount() {
-    if (this.swiperObj.destroy) { // 销毁swiper
-      this.swiperObj.destroy();
-      this.swiperObj = null;
-    }
   }
 
   render() {
@@ -134,4 +107,4 @@ function mapStateToProps({menumodal}) {
   };
 }
 
-export default connect(mapStateToProps)(Index)
+export default connect(mapStateToProps)(Index2)
